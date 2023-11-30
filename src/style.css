@@ -266,11 +266,24 @@ a {
 }
 
 .card__featured .image {
-  background: url("https://placehold.co/600x400");
+  background: url("https://placehold.co/600x400") center;
   background-repeat: no-repeat;
   -o-object-fit: cover;
   object-fit: cover;
   aspect-ratio: 16 / 9;
+}
+
+/*=============================================
+=            Footer           =
+=============================================*/
+
+footer {
+  text-align: center;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-around;
 }
 
 /*=============================================
