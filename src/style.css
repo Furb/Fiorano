@@ -38,6 +38,7 @@ html:focus-within {
 }
 
 body {
+  height: 100%;
   min-height: 100vh;
   font-family: var(--body-font);
   color: var(--richBlack);
@@ -45,6 +46,7 @@ body {
   overflow-x: hidden;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  position: relative;
 }
 
 /* A elements that don't have a class get default styles */
@@ -88,14 +90,127 @@ body {
   padding-bottom: 3.5rem;
 }
 
+/* Spacing & layout */
+
+.container {
+  width: min(112.5rem, 77vw);
+  margin-inline: auto;
+}
+
+.container__outer {
+  max-width: 120rem;
+  margin-inline: auto;
+}
+
+.columns {
+  display: grid;
+  gap: 1rem;
+}
+
+.two__columns-notEqual {
+  display: grid;
+  gap: 1rem;
+}
+
+.three__columns-equal {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid__columns-1 {
+}
+.grid__columns-2 {
+}
+.grid__columns-3 {
+}
+.grid__columns-4 {
+}
+.grid__columns-5 {
+}
+.grid__columns-6 {
+}
+.grid__columns-7 {
+}
+.grid__columns-8 {
+}
+.grid__columns-9 {
+}
+.grid__columns-10 {
+}
+.grid__columns-11 {
+}
+.grid__columns-12 {
+}
+
+/*Color*/
+
+.color__primary {
+  color: var(--primary);
+}
+
+.color__richBlack {
+  color: var(--richBlack);
+}
+
+.color__white {
+  color: var(--white);
+}
+
+.color__black {
+  color: var(--black);
+}
+
+.color__grey {
+  color: var(--grey);
+}
+
+.color__greyLight {
+  color: var(--greyLight);
+}
+
+.color__greyDark {
+  color: var(--greyDark);
+}
+
+.bg__primary {
+  background: var(--primary);
+}
+
+.bg__richBlack {
+  background: var(--richBlack);
+}
+
+.bg__white {
+  background: var(--white);
+}
+
+.bg__black {
+  background: var(--black);
+}
+
+.bg__grey {
+  background: var(--grey);
+}
+
+.bg__greyLight {
+  background: var(--greyLight);
+}
+
+.bg__greyDark {
+  background: var(--greyDark);
+}
+
 /*typography*/
+
+h1,
+.h1 {
+}
 
 h2,
 .h2 {
-  color: var(--black);
   font-size: 1.375rem;
   font-family: var(--ext-font);
   font-weight: 700;
+  max-width: 20rem;
 }
 
 h4 {
@@ -110,7 +225,6 @@ p {
 
 .label {
   font-size: 0.875rem;
-  color: var(--greyDark);
 }
 
 a {
@@ -118,17 +232,13 @@ a {
   color: inherit;
 }
 
-/* Spacing & layout */
-
-.container {
-  width: min(85vw, 90rem);
-  margin-inline: auto;
+.container__outer .column__cta {
+  padding-left: 10.85vw;
 }
 
-.twoColumnsFeatured {
-  display: flex;
+.columns img {
+  max-width: 40rem;
 }
-
 /*=============================================
 =            mainNav            =
 =============================================*/
@@ -153,6 +263,14 @@ a {
 #headerNav nav a:active,
 #headerNav nav a:focus {
   color: var(--black);
+}
+
+.card__featured .image {
+  background: url("https://placehold.co/600x400");
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
 }
 
 /*=============================================
@@ -194,3 +312,30 @@ footer .racingPattern {
 }
 
 /*=====  End of RacingPattern  ======*/
+
+/*=============================================
+=            Laptop            =
+=============================================*/
+@media (min-width: 61.25rem) {
+  /* General */
+
+  .columns__equal {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+
+  .two__columns-notEqual {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+
+  .three__columns-equal {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*=============================================
+=            Desktop            =
+=============================================*/
+@media (min-width: 67.5rem) {
+}
