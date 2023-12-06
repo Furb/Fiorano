@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/vba7ltj.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,700,0,0"
+    />
+
     <title>Club di Fiorano</title>
   </head>
   <body>
+    <!-- /.overlay -->
     <header>
       <div class="racingPattern"></div>
+      <div class="overlay"></div>
       <div class="container">
         <div id="headerNav">
           <a class="logo" href="/">
@@ -154,9 +161,19 @@
             </svg>
           </a>
           <!-- /.logo -->
-          <nav class="mainLinks">
-            <a class="label" href="#">Forside</a
-            ><a class="label" href="#">Markedsplads</a
+
+          <button
+            class="nav__toggle"
+            aria-controls="mainNav"
+            aria-expanded="false"
+          >
+            <span class="material-symbols-outlined menu__icon">
+              menu
+            </span></button
+          ><!-- /.toggle -->
+
+          <nav id="main__links" data-visible="false">
+            <a class="label" href="#">Markedsplads</a
             ><a class="label" href="#">Tifosi corner</a
             ><a class="label" href="#">Om</a
             ><a class="label" href="#">Min profil</a>
@@ -167,14 +184,14 @@
       <!-- /.container -->
     </header>
     <main>
-      <section>
+      <section class="featured__CTA space__bottom-small">
         <div class="container">
-          <div class="columns">
-            <div class="textColumn grid__">
+          <div class="columns two__columns-notEqual space__bottom-xs">
+            <div class="textColumn space__bottom-small">
               <p class="label">Nyhed 24.06.2022</p>
               <!-- /.label -->
               <h2>Ferrari lancerer V6-hybrid: 296 GTB</h2>
-              <p>
+              <p class="featured__CTA-body">
                 For første gang nogensinde har Ferrari i dag lanceret en V6 med
                 den stejlende hingst på fronten (Dino 246 havde ikke hyphesten
                 på). Ferrari 296 GTB, der som betegnelsen antyder er en 2,9
@@ -189,37 +206,84 @@
             <picture><img src="assets/296GTB.jpg" alt="" /></picture>
           </div>
           <!-- /.twoColumnFeatured -->
+
+          <div class="carousel">
+            <div class="slides">
+              <a href="#"
+                ><span class="material-symbols-outlined slide__active">
+                  radio_button_unchecked
+                </span></a
+              >
+              <!-- /.slide -->
+              <a href="#"
+                ><span class="material-symbols-outlined slide">
+                  radio_button_unchecked
+                </span></a
+              >
+              <!-- /.slide -->
+              <a href="#"
+                ><span class="material-symbols-outlined slide">
+                  radio_button_unchecked
+                </span></a
+              >
+              <!-- /.slide -->
+              <a href="#"
+                ><span class="material-symbols-outlined slide">
+                  radio_button_unchecked
+                </span></a
+              >
+              <!-- /.slide -->
+              <a href="#"
+                ><span class="material-symbols-outlined slide">
+                  radio_button_unchecked
+                </span></a
+              >
+              <!-- /.slide -->
+            </div>
+            <!-- /.slides -->
+
+            <div class="string"></div>
+            <!-- /.string -->
+
+            <h4>Se alle nyheder</h4>
+          </div>
+          <!-- /.carousel -->
         </div>
         <!-- /.container -->
       </section>
 
-      <section>
+      <section class="space__bottom-small featured__events">
         <div class="container__outer columns columns__equal">
-          <div class="column__cta">
-            <p class="label">Kommende Tour di Fiorano</p>
-            <h2>Mille Miglia / Maranello 2022</h2>
-            <div class="cta__link">Tilmeld dig</div>
+          <div class="column__cta bg__display color__white">
+            <div class="inside__cta">
+              <p class="label">Kommende Tour di Fiorano</p>
+              <h2>Mille Miglia / Maranello 2022</h2>
+              <div class="cta__link">Tilmeld dig</div>
+            </div>
+            <!-- /.inside__cta -->
           </div>
           <!-- /.column__cta -->
 
           <div class="column__cta bg__primary color__white">
-            <p class="label">Kommende Tour di Fiorano</p>
-            <h2>Mille Miglia / Maranello 2022</h2>
-            <div class="cta__link">Tilmeld dig</div>
+            <div class="inside__cta">
+              <p class="label">Kommende Tour di Fiorano</p>
+              <h2>Mille Miglia / Maranello 2022</h2>
+              <div class="cta__link">Tilmeld dig</div>
+            </div>
+            <!-- /.absolute -->
           </div>
           <!-- /.column__cta -->
         </div>
         <!-- /.twoColumn -->
       </section>
-
-      <section>
+      <section class="featured__CTA space__bottom-small">
         <div class="container">
-          <div class="columns">
-            <div class="textColumn grid__">
-              <p class="label">Nyhed 24.06.2022</p>
+          <div class="columns two__columns-notEqual space__bottom-xs">
+            <div class="textColumn space__bottom-small">
+              <p class="label">Nyeste modelbiler</p>
               <!-- /.label -->
-              <h2>Ferrari lancerer V6-hybrid: 296 GTB</h2>
-              <p>
+              <h2>Ferrari 750 Monza - 1955 - 1:18</h2>
+              <p class="featured__CTA-body">
                 For første gang nogensinde har Ferrari i dag lanceret en V6 med
                 den stejlende hingst på fronten (Dino 246 havde ikke hyphesten
                 på). Ferrari 296 GTB, der som betegnelsen antyder er en 2,9
@@ -227,27 +291,74 @@
                 lille 7,45 kwh. el-motor.
               </p>
 
-              <div class="cta__link">Læs nyhed</div>
+              <div class="cta__link">Se modellen</div>
               <!-- /.cta__link -->
             </div>
             <!-- /.textColumn -->
             <picture><img src="assets/296GTB.jpg" alt="" /></picture>
           </div>
           <!-- /.twoColumnFeatured -->
+
+          <div class="carousel">
+            <div class="slides">
+              <a href="#"
+                ><span class="material-symbols-outlined slide__active">
+                  radio_button_unchecked
+                </span></a
+              >
+              <!-- /.slide -->
+              <a href="#"
+                ><span class="material-symbols-outlined slide">
+                  radio_button_unchecked
+                </span></a
+              >
+              <!-- /.slide -->
+              <a href="#"
+                ><span class="material-symbols-outlined slide">
+                  radio_button_unchecked
+                </span></a
+              >
+              <!-- /.slide -->
+              <a href="#"
+                ><span class="material-symbols-outlined slide">
+                  radio_button_unchecked
+                </span></a
+              >
+              <!-- /.slide -->
+              <a href="#"
+                ><span class="material-symbols-outlined slide">
+                  radio_button_unchecked
+                </span></a
+              >
+              <!-- /.slide -->
+            </div>
+            <!-- /.slides -->
+
+            <div class="string"></div>
+            <!-- /.string -->
+
+            <h4>Se de nyeste modeller</h4>
+          </div>
+          <!-- /.carousel -->
         </div>
         <!-- /.container -->
       </section>
 
-      <section>
+      <section class="gallary space__bottom-lg">
         <div class="container">
           <div class="flex">
             <h2>Markesplads</h2>
+
+            <div class="filter">
+              <p><span>Filter:</span> Sælges</p>
+            </div>
+            <!-- /.filter -->
           </div>
 
-          <h4 class="cta__link">Gå til markedspladsen</h4>
+          <h4 class="cta__link space__bottom-small">Gå til markedspladsen</h4>
           <!-- /.flex -->
 
-          <div class="columns three__columns-equal">
+          <div class="cards columns three__columns-equal">
             <div class="card__featured">
               <div class="image"></div>
               <!-- /.image -->
@@ -389,26 +500,26 @@
     </main>
     <footer>
       <div class="container">
-        <div class="footer__top">
+        <div class="footer__top space__bottom-small">
           <div>
-            <h3>Bliv medlem</h3>
-            <p class="label">Send Email</p>
+            <h2>Bliv medlem</h2>
+            <h4 class="label">Send Email</h4>
           </div>
           <div>
-            <h3>Kontakt os</h3>
-            <p class="label">Send Email</p>
+            <h2>Kontakt os</h2>
+            <h4 class="label">Send Email</h4>
           </div>
         </div>
         <!-- /.footer__top -->
         <div class="footer__bottom">
-          <p class="label">
+          <p class="label space__bottom-medium">
             This website has no affiliation with Ferrari S.p.A, Scuderia Ferrari
             Marlboro and/or Ferrari Idea S.A. whatsoever. All copyrights,
             trademarks and logos belong to their respective owners.
           </p>
           <!-- /.label -->
 
-          <p class="label">© Club di Fiorano 2005-2022</p>
+          <p class="label space__bottom-small">© Club di Fiorano 2005-2022</p>
           <!-- /.label -->
           <div class="racingPattern"></div>
         </div>
