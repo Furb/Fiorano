@@ -22,3 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+/* copyright år */
+
+const year = `
+        ${new Date().getFullYear()} 
+     `;
+
+document.querySelector(".year").innerHTML = year;
