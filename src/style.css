@@ -232,11 +232,13 @@ p {
 
 .label {
   font-size: 0.875rem;
+  margin-bottom: 0.5rem;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  transition: all 0.3s ease;
 }
 
 .pris {
@@ -253,6 +255,10 @@ a {
   position: absolute;
   bottom: 2.5rem;
   left: 2.5rem;
+}
+
+.inside__cta h2 {
+  margin-bottom: 1.25rem;
 }
 
 /* Misc */
@@ -316,6 +322,7 @@ a {
 }
 
 #headerNav nav a {
+  color: var(--greyDark);
   width: 100%;
 }
 
@@ -408,6 +415,58 @@ footer .racingPattern {
 }
 
 /*=====  End of RacingPattern  ======*/
+
+/*=============================================
+=            CTA Link            =
+=============================================*/
+
+.cta__link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.4;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.cta__link::after {
+  font-family: "Material Symbols Outlined";
+  content: "chevron_right";
+  display: flex;
+  margin-left: 1.5rem;
+  border: 2px solid;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2px;
+}
+
+.cta__link:hover {
+  color: var(--primary);
+}
+
+.cta__link:hover::after {
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.bg__primary .cta__link:hover {
+  color: var(--greyLight);
+}
+
+.bg__primary .cta__link:hover::after {
+  background-color: var(--greyLight);
+  border: 2px solid var(--greyLight);
+  color: var(--primary);
+}
+
+/*=====  End of CTA Link  ======*/
 
 /*=============================================
 =            carousel            =
