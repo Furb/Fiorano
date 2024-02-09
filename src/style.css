@@ -126,6 +126,10 @@ body {
   gap: 1rem;
 }
 
+.max-w-text {
+  max-width: 100%;
+}
+
 /* margin bottom på elementer */
 
 .space__bottom-xs {
@@ -241,13 +245,22 @@ a {
   transition: all 0.3s ease;
 }
 
+/* form fields */
+
+input {
+  padding: 0.875rem 0.75rem;
+  border: 2px solid var(--grey);
+  border-radius: 0.5rem;
+  min-width: 12rem;
+}
+
 .pris {
   color: var(--primary);
 }
 
 .container__outer .column__cta {
   padding-left: 10.85vw;
-  height: min(40rem, 50vh);
+  height: min(40rem, 80vh);
   position: relative;
 }
 
@@ -255,6 +268,7 @@ a {
   position: absolute;
   bottom: 2.5rem;
   left: 2.5rem;
+  right: 2.5rem;
 }
 
 .inside__cta h2 {
@@ -469,6 +483,53 @@ footer .racingPattern {
 /*=====  End of CTA Link  ======*/
 
 /*=============================================
+=            Search and Filter            =
+=============================================*/
+
+.search__filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.filter {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.filter__link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.4;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.filter__link a {
+  margin-left: 0.25rem;
+}
+
+.filter__link::after {
+  font-family: "Material Symbols Outlined";
+  content: "expand_more";
+  display: flex;
+  margin-left: 0.875rem;
+  border: 2px solid var(--grey);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2px;
+}
+
+/*=====  End of Search and Filter link  ======*/
+
+/*=============================================
 =            carousel            =
 =============================================*/
 
@@ -531,6 +592,29 @@ span.slide__active {
 /*=====  End of Featured events  ======*/
 
 /*=============================================
+=            Specs            =
+=============================================*/
+
+.car__specs {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  font-size: 0.875rem;
+}
+.spec__title {
+  width: 30%;
+  min-width: 4rem;
+  font-weight: 600;
+}
+.spec__value {
+  width: 60%;
+}
+
+/*=====  End of Specs  ======*/
+
+/*=============================================
 =            Gallary            =
 =============================================*/
 
@@ -562,10 +646,78 @@ span.slide__active {
   margin-bottom: 0.625rem;
 }
 
+.user__gallery .card__featured:first-of-type {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1.5rem;
+}
+
+.user__gallery .card__featured:first-of-type h2 {
+  margin-bottom: 1.5rem;
+}
+
+.user__gallery .card__featured:first-of-type p {
+  font-weight: 100;
+  font-size: 0.875rem;
+}
+
+.card__statistic {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.statistic__value {
+  font-size: 1.25rem !important;
+}
+
 /*=====  End of Gallary  ======*/
 
 /*=============================================
-=            Laptop            =
+=            user Profile             =
+=============================================*/
+
+.profile picture {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile__avatar {
+  display: inline-block;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+
+  -o-object-fit: cover;
+
+  object-fit: cover;
+}
+
+/* Profile nav */
+
+.profile__links {
+  display: flex;
+  gap: 3.75rem;
+  height: 1.5rem;
+}
+
+.profile__links a {
+  padding-bottom: 0.35rem;
+}
+
+.profile__links a:hover,
+.profile__links a:active,
+.profile__links a:focus {
+  color: var(--black);
+  border-bottom: 2px solid;
+}
+
+/*=====  End of user Profile   ======*/
+
+/*=============================================
+=            Tablet           =
 =============================================*/
 @media (min-width: 61.25rem) {
   /* General */
@@ -610,6 +762,12 @@ span.slide__active {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  /*typography*/
+
+  .max-w-text {
+    max-width: 75%;
+  }
+
   /* Nav */
 
   #headerNav nav#main__links {
@@ -626,7 +784,22 @@ span.slide__active {
 }
 
 /*=============================================
-=            Desktop            =
+=            laptop            =
 =============================================*/
-@media (min-width: 67.5rem) {
+@media (min-width: 80rem) {
+}
+
+/*=============================================
+=            Desktop           =
+=============================================*/
+@media (min-width: 90rem) {
+  /*typography*/
+
+  .max-w-text {
+    max-width: 50%;
+  }
+
+  .container__outer .column__cta {
+    height: min(40rem, 50vh);
+  }
 }
